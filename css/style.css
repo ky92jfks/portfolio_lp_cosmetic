@@ -1,0 +1,325 @@
+@charset "UTF-8";
+
+/* 共通 */
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family: 'Montserrat', 'Meiryo', sans-serif;
+    background-color: #fbcdd2;
+    color: #300004;
+}
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.wrapper {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.section-title {
+    text-align: center;
+    font-size: 48px;
+    margin-bottom: 80px;
+}
+.hidden {
+    display: none;
+}
+
+/* header */
+#header {
+    position: relative;
+    height: 100vh;
+    background-image: url('../img/mainvisual.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    background-attachment: fixed;
+}
+#header .site-title {
+    color: #fff;
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    font-size: 30px;
+    line-height: 1;
+    position: absolute;
+    top: 70px;
+}
+#header .parts-bottom {
+    position: absolute;
+    bottom: 0;
+}
+
+/* concept */
+#concept {
+    margin: 300px auto;
+}
+#concept .text {
+    text-align: center;
+    font-size: 22px;
+    line-height: 72px;
+}
+
+/* products */
+#products {
+    margin: 300px auto;
+}
+#products .inner {
+    margin-bottom: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#products .inner .content {
+    margin-right: 60px;
+}
+#products .inner .content:last-child {
+    margin-right: 0;
+}
+#products .inner .content img {
+    width: 360px;
+    margin-bottom: 40px;
+}
+#products .inner .content p {
+    font-size: 18px;
+    line-height: 36px;
+    margin-left: 20px;
+}
+
+/* visual */
+#visual {
+    position: relative;
+    height: 1000px;
+    background-image: url('../img/sub-visual.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    background-attachment: fixed;
+}
+#visual .parts-top {
+    position: absolute;
+    top: 0;
+}
+#visual .parts-bottom {
+    position: absolute;
+    bottom: 0;
+}
+
+/* sub-products */
+#sub-products {
+    margin: 300px auto;
+}
+#sub-products .content {
+    margin-bottom: 150px;
+    position: relative;
+    display: flex;
+}
+#sub-products .content:last-child {
+    margin-bottom: 0;
+}
+#sub-products .content.right {
+    flex-direction: row-reverse;
+}
+#sub-products .content .text {
+    background-color: #e19fa1;
+    opacity: 0.8;
+    border-radius: 16px;
+    width: 530px;
+    padding: 35px 50px;
+    position: absolute;
+    left: 490px;
+    bottom: 30px;
+}
+#sub-products .content.right .text {
+    position: absolute;
+    left: auto;
+    right: 490px;
+}
+#sub-products .content .text p {
+    font-size: 18px;
+    line-height: 36px;
+}
+
+/* news */
+#news {
+    margin: 0 auto 300px;
+}
+#news ul {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 18px;
+}
+#news ul li {
+    width: 100%;
+}
+#news ul li a {
+    transition: opacity 0.2s;
+}
+#news ul li a:hover {
+    opacity: 0.7;
+}
+#news ul li time {
+    margin-right: 40px;
+    margin-bottom: 45px;
+}
+#news ul li p {
+    display: inline-block;
+    margin-bottom: 45px;
+}
+
+/* footer */
+#footer {
+    background-color: #c68a8c;
+}
+#footer .copyright {
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    padding-top: 120px;
+    padding-bottom: 40px;
+}
+
+/* jQuery用 */
+.fadeIn_up {
+    opacity: 0;
+    transform: translate(0, 50%);
+    transition: 1.5s;
+}
+.fadeIn_up.is-show {
+    transform: translate(0, 0);
+    opacity: 1;
+}
+
+
+/* タブレット・SP */
+@media screen and (max-width: 1240px) {
+    /* header */
+    #header .site-title {
+        font-size: 20px;
+        top: 30px;
+    }
+
+    /* concept */
+    #concept {
+        margin: 150px auto;
+    }
+    #concept .text {
+        font-size: 14px;
+        line-height: 36px;
+    }
+
+    /* products */
+    #products {
+        margin: 150px auto;
+    }
+    #products .inner {
+        margin-bottom: 0;
+    }
+    #products .inner .content {
+        margin-bottom: 40px;
+    }
+    #products .inner .content img {
+        width: 180px;
+        margin-bottom: 18px;
+    }
+    #products .inner .content p {
+        font-size: 12px;
+        line-height: 20px;
+        margin-left: 0;
+    }
+
+    /* visual */
+    #visual {
+        height: 500px;
+    }
+    #visual .parts-top {
+        position: absolute;
+        top: 0;
+    }
+    #visual .parts-bottom {
+        position: absolute;
+        bottom: 0;
+    }
+
+    /* sub-products */
+    #sub-products {
+        margin: 150px auto;
+    }
+    #sub-products .content {
+        margin-bottom: 60px;
+    }
+    #sub-products .content .text {
+        width: auto;
+        padding: 20px 25px;
+    }
+    #sub-products .content .text p {
+        font-size: 12px;
+        line-height: 24px;
+    }
+
+    /* news */
+    #news {
+        margin: 0 auto 150px;
+    }
+    #news .section-title {
+        font-size: 24px;
+        margin-bottom: 40px;
+    }
+    #news ul {
+        font-size: 12px;
+    }
+    #news ul li time {
+        margin-right: 20px;
+    }
+
+    /* footer */
+    #footer .copyright {
+        font-size: 10px;
+        padding-top: 60px;
+        padding-bottom: 20px;
+    }
+}
+
+
+/* SP */
+@media screen and (max-width: 800px) {
+    /* products */
+    #products .inner {
+        flex-direction: column;
+        align-items: center;
+    }
+    #products .inner .content {
+        margin-right: 0;
+    }
+
+    /* sub-products */
+    #sub-products .content {
+        position: static;
+        flex-direction: column;
+    }
+    #sub-products .content img {
+        margin-bottom: 10px;
+    }
+    #sub-products .content.right {
+        flex-direction: column;
+    }
+    #sub-products .content .text {
+        border-radius: 8px;
+        position: static;
+        left: auto;
+        bottom: auto;
+    }
+    #sub-products .content.right .text {
+        position: static;
+        right: auto;
+    }
+}
